@@ -1,7 +1,7 @@
 package com.example.topicapijpa.api;
 
+import com.example.topicapijpa.dto.TopicDto;
 import com.example.topicapijpa.model.Topic;
-import com.example.topicapijpa.exception.ResourceNotFoundException;
 import com.example.topicapijpa.service.TopicService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -24,13 +24,13 @@ public class TopicController {
     }
 
     @GetMapping("/topics")
-    public List<Topic> getAllTopics() {
+    public List<TopicDto> getAllTopics() {
         return topicService.getAllTopics();
     }
 
     @GetMapping("/topics/{id}")
-    public Topic getTopic(@PathVariable int id) {
-        return topicService.getTopic(id).orElseThrow(()-> new ResourceNotFoundException("not found"+id));
+    public TopicDto getTopic(@PathVariable int id) {
+        return topicService.getTopic(id);
     }
 
     @PostMapping("/topics")
