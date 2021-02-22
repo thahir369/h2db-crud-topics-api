@@ -26,3 +26,5 @@ l
 <src/test/java/com/example/topicapijpa/service/TestCases.java,a\4\a4d75670b53424c85354223cb362b4315a92356d
 n
 >src/test/java/com/example/topicapijpa/TopicControllerTest.java,f\f\ffab6ac8219b99d240bd9ac9fa1c85c005f588b3
+m
+=src/main/java/com/example/topicapijpa/model/ErrorDetails.java,c\5\c5e837e8a9a98892a9bb002cf4a7e616b7b21b65
