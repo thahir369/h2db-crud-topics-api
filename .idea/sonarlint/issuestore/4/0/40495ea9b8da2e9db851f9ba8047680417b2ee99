@@ -1,0 +1,9 @@
+
+Q
+java:S1172G"/Remove this unused method parameter "topicDto".(ƒÉîàùÿÿÿÿ8Æš×Àı.
+Z
+java:S1144:"=Remove this unused private "transformTopicToTopicDto" method.(¼Îôš8ÚìÉÀı.
+£
+java:S1186G"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ƒÉîàùÿÿÿÿ8Æš×Àı.
+^
+java:S1144G"<Remove this unused private "transformTopicDtoToToic" method.(ƒÉîàùÿÿÿÿ8¬ÃËÀı.
