@@ -1,4 +1,4 @@
-package com.example.topicapijpa.api;
+package com.example.topicapijpa.controller;
 
 import com.example.topicapijpa.dto.TopicDto;
 import com.example.topicapijpa.model.Topic;
