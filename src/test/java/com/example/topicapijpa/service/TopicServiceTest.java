@@ -1,9 +1,8 @@
-//package com.example.topicapijpa;
+//package com.example.topicapijpa.service;
 //
 //import com.example.topicapijpa.dto.TopicDto;
 //import com.example.topicapijpa.model.Topic;
 //import com.example.topicapijpa.repository.TopicRepository;
-//import com.example.topicapijpa.service.TopicService;
 //import org.junit.jupiter.api.Test;
 //import org.junit.jupiter.api.extension.ExtendWith;
 //import org.mockito.InjectMocks;
@@ -20,40 +19,41 @@
 //
 //
 //@ExtendWith(MockitoExtension.class)
-//class TopicControllerTest {
+//class TopicServiceTest {
 //
-//  @InjectMocks
-//  TopicService topicService;
+//    @InjectMocks
+//    TopicService topicService;
 //
-//  @Mock
-//  TopicRepository topicRepository;
+//    @Mock
+//    TopicRepository topicRepository;
 //
 //    @Test
-//    void getAllTopics() {
+//    void getAllTopicsTest() {
+//
 //        when(topicRepository.findAll()).thenReturn(data);
-//      List<TopicDto> listOfTopics=topicService.getAllTopics();
+//        List<TopicDto> listOfTopics = topicService.getAllTopics();
 //
 //        assertEquals("java", listOfTopics.get(0).getName());
 //    }
 //
 //    @Test
-//    void getTopic() {
+//    void getTopicTest() {
 //
-//      Topic x=new Topic('2',"javascript","markup language");
-//      when(topicRepository.findById(Mockito.anyInt())).thenReturn(Optional.of(x));
-//      Optional<Topic> obj= topicService.getTopic(Mockito.anyInt());
-//      assertEquals(true,obj.isPresent());
+//        Topic x = new Topic('2', "javascript", "markup language");
+//        when(topicRepository.findById(Mockito.anyInt())).thenReturn(Optional.of(x));
+//        Optional<Topic> obj = topicService.getTopic(Mockito.anyInt());
+//        assertEquals(true, obj.isPresent());
 //    }
 //
 //    @Test
-//    void addTopic() {
+//    void addTopicTest() {
 //    }
 //
 //    @Test
-//    void updateTopic() {
+//    void updateTopicTest() {
 //    }
 //
 //    @Test
-//    void deleteTopic() {
+//    void deleteTopicTest() {
 //    }
 //}

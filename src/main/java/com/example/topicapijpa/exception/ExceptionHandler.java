@@ -14,10 +14,10 @@ public class ExceptionHandler {
 
     //handle specific exception
     @org.springframework.web.bind.annotation.ExceptionHandler(ResourceNotFoundException.class)
-    public ResponseEntity<ErrorDetails> handleResourceNotFoundException(ResourceNotFoundException exception, WebRequest webRequest){
+    public ResponseEntity<ErrorDetails> handleResourceNotFoundException(ResourceNotFoundException exception, WebRequest webRequest) {
 
-        ErrorDetails errorDetails=new ErrorDetails(
-                new Date(),exception.getMessage(),webRequest.getDescription(false),HttpStatus.NOT_FOUND
+        ErrorDetails errorDetails = new ErrorDetails(
+                new Date(), exception.getMessage(), webRequest.getDescription(false), HttpStatus.NOT_FOUND
         );
         return new ResponseEntity<>(errorDetails, HttpStatus.NOT_FOUND);
     }

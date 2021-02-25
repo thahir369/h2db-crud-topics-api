@@ -1,5 +1,6 @@
 package com.example.topicapijpa.service;
 
+import com.example.topicapijpa.TopicMapper;
 import com.example.topicapijpa.dto.TopicDto;
 import com.example.topicapijpa.exception.ResourceNotFoundException;
 import com.example.topicapijpa.model.Topic;
@@ -16,6 +17,9 @@ public class TopicService {
 
     @Autowired
     private TopicRepository topicRepository;
+
+    @Autowired
+    private TopicMapper topicMapper;
 
     List<Topic> topics;
     List<TopicDto> topicDtos=new ArrayList<>();
@@ -45,11 +49,10 @@ public class TopicService {
 
     public void updateTopic(Topic topic) {
         topicRepository.save(topic);
-
     }
 
     public void deleteTopic(int id) {
-     topicRepository.deleteById(id);
+        topicRepository.deleteById(id);
     }
 
 
@@ -63,7 +66,7 @@ public class TopicService {
                 .name(topic.get().getName())
                 .description(topic.get().getDescription())
                 .build();
-    }
+        }
         else {
             return null;
         }
