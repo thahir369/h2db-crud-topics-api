@@ -2,6 +2,7 @@ package com.example.topicapijpa.service;
 
 import com.example.topicapijpa.dto.TopicDto;
 import com.example.topicapijpa.exception.ResourceNotFoundException;
+import com.example.topicapijpa.mapper.TopicMapper;
 import com.example.topicapijpa.model.Topic;
 import com.example.topicapijpa.repository.TopicRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,8 @@ public class TopicService {
 
     @Autowired
     private TopicRepository topicRepository;
+
+    private TopicMapper topicMapper;
 
     List<Topic> topics;
     List<TopicDto> topicDtos = new ArrayList<>();
@@ -33,7 +36,7 @@ public class TopicService {
         if (!topicRepository.findById(id).isPresent())
             throw new ResourceNotFoundException("topic with id " + id + " is not found");
         else
-            return transformTopicToTopicDto(topicRepository.findById(id));
+            return topicMapper.transformTopicToDto(topicRepository.findById(id));
 
     }
 

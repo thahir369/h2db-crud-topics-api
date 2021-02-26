@@ -3,8 +3,6 @@ w
 Gsrc/main/java/com/example/topicapijpa/H2dbCrudTopicsApiApplication.java,0\c\0c9864a3bb79a30c4c2f5f07c9d0487d16c3235f
 g
 7src/main/java/com/example/topicapijpa/dto/TopicDto.java,0\e\0ed37d70374943de4109624da8bd53a467832a64
-u
-Esrc/main/java/com/example/topicapijpa/exception/ExceptionHandler.java,3\e\3e03d57c109dacf51b80d80460dfaf26dd186896
 ~
 Nsrc/main/java/com/example/topicapijpa/exception/ResourceNotFoundException.java,4\3\4366457bbcf63fcbcdd293b5b10d40dfa644aad1
 u
@@ -24,13 +22,15 @@ q
 Asrc/main/java/com/example/topicapijpa/exception/ErrorDetails.java,3\2\32194477e1d1bd8ff7b8a8a04115ca242fc230f6
 H
 h2db-crud-topics-api.iml,e\a\ea5b7898877923133f023f9963d5878e1c83a006
-f
-6src/main/java/com/example/topicapijpa/TopicMapper.java,6\b\6b5f432f79ebc8ae931e47eb9d8898f3590cb311
 s
 Csrc/test/java/com/example/topicapijpa/service/TopicServiceTest.java,8\8\88bdf7025007812c9cb0087591142efa7045e372
 u
 Esrc/main/java/com/example/topicapijpa/controller/TopicController.java,7\2\7247a921fb37ba7597055175e2f310a8bc63e5d4
 y
 Isrc/test/java/com/example/topicapijpa/controller/TopicControllerTest.java,5\6\560be0ada72268e613bb1f39df18453e26b17b4c
+{
+Ksrc/main/java/com/example/topicapijpa/exception/GlobalExceptionHandler.java,c\3\c3aed54525c8ab92ba1a9d4d6298f050bcf297b6
+v
+Fsrc/main/java/com/example/topicapijpa/bootstrapLoader/TopicLoader.java,f\3\f39bb5f8154597f6c1a62a3ef940f2d59a0c2f07
 m
-=src/main/java/com/example/topicapijpa/loader/TopicLoader.java,0\2\02fc3f556ee80eeebedb2d62e1184713c2c8c624
+=src/main/java/com/example/topicapijpa/mapper/TopicMapper.java,a\f\af8ae96d3761b9f8d9bfb57f92670341a0fb37a1
