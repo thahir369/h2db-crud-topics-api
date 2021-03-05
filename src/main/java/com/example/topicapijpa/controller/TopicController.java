@@ -1,7 +1,6 @@
 package com.example.topicapijpa.controller;
 
 import com.example.topicapijpa.dto.TopicDto;
-import com.example.topicapijpa.model.Topic;
 import com.example.topicapijpa.service.TopicService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -35,20 +34,22 @@ public class TopicController {
 
     @PostMapping("/topics")
     @ResponseStatus(HttpStatus.CREATED)
-    public void addTopic(@RequestBody Topic topic) {
-        topicService.addTopic(topic);
+    public String addTopic(@RequestBody TopicDto topicDto) {
+        topicService.addTopic(topicDto);
+        return ("topic with id:"+topicDto.getId()+" and name:"+topicDto.getName()+" added successfully!");
     }
 
     @PutMapping("topics/{id}")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void updateTopic(@RequestBody Topic topic, @PathVariable int id) {
-        topicService.updateTopic(topic);
+    public String updateTopic(@RequestBody TopicDto topicDto, @PathVariable int id) {
+        topicService.updateTopic(id,topicDto);
+        return ("topic with id:"+id+" and name:"+topicDto.getName()+" updated successfully!");
     }
 
     @DeleteMapping("/topics/{id}")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void deleteTopic(@PathVariable int id) {
+    public String deleteTopic(@PathVariable int id) {
         topicService.deleteTopic(id);
+        return ("topic with id:"+id+" deleted successfully!");
+
     }
 
 

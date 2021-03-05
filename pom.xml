@@ -72,8 +72,8 @@
                     <annotationProcessorPaths>
                         <path>
                             <groupId>org.mapstruct</groupId>
-                            <artifactId>mapstruct-processor</artifactId>
                             <version>${org.mapstruct.version}</version>
+                            <artifactId>mapstruct-processor</artifactId>
                         </path>
                         <path>
                             <groupId>org.projectlombok</groupId>

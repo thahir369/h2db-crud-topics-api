@@ -36,16 +36,19 @@ public class TopicService {
         if (!topicRepository.findById(id).isPresent())
             throw new ResourceNotFoundException("topic with id " + id + " is not found");
         else
-            return topicMapper.transformTopicToDto(topicRepository.findById(id));
+            return transformTopicToTopicDto(topicRepository.findById(id));
 
     }
 
-    public void addTopic(Topic topic) {
-        topicRepository.save(topic);
+    public void addTopic(TopicDto topicDto) {
+        topicRepository.save(transformTopicDtoToTopic(topicDto));
     }
 
-    public void updateTopic(Topic topic) {
-        topicRepository.save(topic);
+    public void updateTopic(int id, TopicDto topicDto) {
+        if (!topicRepository.findById(id).isPresent())
+            throw new ResourceNotFoundException("topic with id " + id + " is not found");
+        else
+        topicRepository.save(transformTopicDtoToTopic(topicDto));
     }
 
     public void deleteTopic(int id) {
@@ -68,7 +71,11 @@ public class TopicService {
 
     private Topic transformTopicDtoToTopic(TopicDto topicDto) {
 
-        return null;
+        return Topic.builder()
+                .id(topicDto.getId())
+                .name(topicDto.getName())
+                .description(topicDto.getDescription())
+                .build();
 
     }
 
